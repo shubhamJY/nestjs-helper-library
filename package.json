@@ -1,6 +1,6 @@
 {
     "name": "@coderomeos/nestjs-helper-library",
-    "version": "0.1.26",
+    "version": "0.1.27",
     "description": "A nestjs helper library",
     "scripts": {
         "test": "echo \"Error: no test specified\" && exit 1",

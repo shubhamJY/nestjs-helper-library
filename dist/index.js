@@ -36,7 +36,7 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
     return (mod && mod.__esModule) ? mod : { "default": mod };
 };
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.dtos = exports.enums = exports.resources = exports.models = exports.entities = exports.decorators = exports.BaseService = exports.BaseController = void 0;
+exports.dtos = exports.enums = exports.resources = exports.models = exports.entities = exports.decorators = exports.AddressSchema = exports.AddressModel = exports.BaseService = exports.BaseController = void 0;
 const mongoose_1 = __importDefault(require("mongoose"));
 require("dotenv").config();
 mongoose_1.default
@@ -51,6 +51,9 @@ var BaseController_1 = require("./Controllers/BaseController");
 Object.defineProperty(exports, "BaseController", { enumerable: true, get: function () { return BaseController_1.BaseController; } });
 var BaseService_1 = require("./Services/BaseService");
 Object.defineProperty(exports, "BaseService", { enumerable: true, get: function () { return BaseService_1.BaseService; } });
+var address_model_1 = require("./models/address.model");
+Object.defineProperty(exports, "AddressModel", { enumerable: true, get: function () { return address_model_1.AddressModel; } });
+Object.defineProperty(exports, "AddressSchema", { enumerable: true, get: function () { return address_model_1.AddressSchema; } });
 exports.decorators = __importStar(require("./decorators"));
 exports.entities = __importStar(require("./entities"));
 exports.models = __importStar(require("./models"));

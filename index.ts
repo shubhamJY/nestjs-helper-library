@@ -13,6 +13,8 @@ mongoose
 export { BaseController } from "./Controllers/BaseController";
 export { BaseService } from "./Services/BaseService";
 
+export { AddressModel, AddressDocument, AddressSchema } from "./models/address.model";
+
 export * as decorators from "./decorators";
 export * as entities from "./entities";
 export * as models from "./models";
