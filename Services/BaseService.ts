@@ -1,7 +1,6 @@
 import {
     BadRequestException,
     ConflictException,
-    Inject,
     Injectable,
     InternalServerErrorException,
     NotFoundException,
@@ -9,9 +8,9 @@ import {
 import * as bcrypt from "bcrypt";
 import * as path from "path";
 import * as fs from "fs";
-import mongoose, { Document, Model, PipelineStage } from "mongoose";
+import mongoose, { PipelineStage } from "mongoose";
 import { genFileNameWithDate } from "../helpers/filesystem";
-import { Awss3Service } from "../awss3/awss3.service";
+// import { Awss3Service } from "../awss3/awss3.service";
 import Attachment from "../entities/Attachment";
 import { PublishState } from "../enums/PublishState";
 import { v4 as uuid4 } from "uuid";
