@@ -1,4 +1,4 @@
-export interface Attachment {
+export interface AttachmentEntity {
     filename: string;
     url: string;
 }

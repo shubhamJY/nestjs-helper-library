@@ -1,11 +1,10 @@
 import { Prop, Schema, SchemaFactory } from "@nestjs/mongoose";
 import { Document, Schema as MongooseSchema } from "mongoose";
-import { AddressableTypes } from "../enums/AddressableTypes";
 
-export type AddressDocument = Address & Document;
+export type AddressDocument = AddressModel & Document;
 
 @Schema({ timestamps: true })
-export class Address {
+export class AddressModel {
     @Prop({ type: String })
     line1: string;
 
@@ -42,4 +41,4 @@ export class Address {
     // addressableType: AddressableTypes;
 }
 
-export const AddressSchema = SchemaFactory.createForClass(Address);
+export const AddressSchema = SchemaFactory.createForClass(AddressModel);

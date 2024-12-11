@@ -11,8 +11,7 @@ import * as fs from "fs";
 import mongoose, { PipelineStage } from "mongoose";
 import { genFileNameWithDate } from "../helpers/filesystem";
 // import { Awss3Service } from "../awss3/awss3.service";
-import { Attachment } from "../entities/Attachment";
-import { PublishState } from "../enums/PublishState";
+import { PublishStateEnum } from "../enums/publishState.enum";
 import { v4 as uuid4 } from "uuid";
 
 type SortType = {
@@ -246,7 +245,7 @@ export abstract class BaseService {
         return tempData;
     }
 
-    async updatePublishStatus(id: string, publishStatus: PublishState) {
+    async updatePublishStatus(id: string, publishStatus: PublishStateEnum) {
         return this.findOneAndUpdate({ _id: id }, { publishedStatus: publishStatus });
     }
 

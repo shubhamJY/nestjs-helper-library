@@ -1,5 +1,5 @@
 import { IsEnum, IsNotEmpty, IsNumber, IsOptional, IsString, Length, Max } from "class-validator";
-import { AddressableTypes } from "../enums/AddressableTypes";
+import { AddressableTypes } from "../enums/addressableTypes.enum";
 
 export class AddressDto {
     @IsNotEmpty()

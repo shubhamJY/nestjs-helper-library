@@ -1,4 +1,4 @@
-export enum DocumentFace {
+export enum DocumentFaceEnum {
     FRONT = "front",
     BACK = "back",
 }

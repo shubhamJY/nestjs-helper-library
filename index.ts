@@ -10,29 +10,13 @@ mongoose
         console.log(err);
     });
 
-export { BaseController } from "./Controllers/BaseController";
-export { ListingTypesEnum } from "./enums/listingTypes.enum";
+export { BaseController } from "./controllers/BaseController";
+export { BaseService } from "./services/BaseService";
 
-export { isUnique } from "./decorators/unique.decorator";
-export { IsUniqueInterface } from "./decorators/unique.decorator";
-export { IsUniqueConstraint } from "./decorators/unique.decorator";
-
-export { isExists } from "./decorators/exists.decorator";
-export { IsExistsInterface } from "./decorators/exists.decorator";
-export { IsExistsConstraint } from "./decorators/exists.decorator";
-
-export { Match } from "./decorators/match.decorator";
-
-export { BaseService } from "./Services/BaseService";
-
-export { OtpMessageChannelTypes } from "./enums/OtpMessageChannelTypes";
-export { DocumentFace } from "./enums/DocumentFace";
-
-export { Attachment } from "./entities/Attachment";
-
-export { AddressDto } from "./dto/addressDto";
-export { AddressableTypes } from "./enums/AddressableTypes";
-
-export { BaseResource } from "./resources/base.resource";
-
-export { Address, AddressDocument, AddressSchema } from "./models/address.model";
+export * from "./decorators";
+export * from "./enums";
+export * from "./entities";
+export * from "./models";
+export * from "./resources";
+export * from "./enums";
+export * from "./dtos";
