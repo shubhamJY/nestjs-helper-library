@@ -1,0 +1,1 @@
+{"version":3,"file":"brand.entity.js","sourceRoot":"","sources":["../../entities/brand.entity.ts"],"names":[],"mappings":";;;AAAA,+CAA2C;AAE3C,MAAa,WAAY,SAAQ,wBAAU;IACvC,YAAY,OAA6B;QACrC,MAAM,OAAO,GAAQ,CAAC,KAAK,EAAE,MAAM,EAAE,SAAS,EAAE,OAAO,EAAE,QAAQ,EAAE,MAAM,CAAC,CAAC;QAC3E,KAAK,CAAC,OAAO,EAAE,OAAO,CAAC,CAAC;IAC5B,CAAC;CACJ;AALD,kCAKC"}

@@ -1,0 +1,1 @@
+{"version":3,"file":"state.entity.js","sourceRoot":"","sources":["../../entities/state.entity.ts"],"names":[],"mappings":";;;AAAA,+CAA2C;AAE3C,MAAa,WAAY,SAAQ,wBAAU;IACvC,YAAY,OAA6B;QACrC,MAAM,OAAO,GAAQ,CAAC,KAAK,EAAE,IAAI,EAAE,MAAM,EAAE,YAAY,EAAE,UAAU,CAAC,CAAC;QACrE,KAAK,CAAC,OAAO,EAAE,OAAO,CAAC,CAAC;IAC5B,CAAC;CACJ;AALD,kCAKC"}

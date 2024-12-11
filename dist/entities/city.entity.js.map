@@ -1,0 +1,1 @@
+{"version":3,"file":"city.entity.js","sourceRoot":"","sources":["../../entities/city.entity.ts"],"names":[],"mappings":";;;AAAA,+CAA2C;AAE3C,MAAa,UAAW,SAAQ,wBAAU;IACtC,YAAY,OAA4B;QACpC,MAAM,OAAO,GAAQ,CAAC,KAAK,EAAE,IAAI,EAAE,MAAM,EAAE,UAAU,EAAE,YAAY,CAAC,CAAC;QACrE,KAAK,CAAC,OAAO,EAAE,OAAO,CAAC,CAAC;IAC5B,CAAC;CACJ;AALD,gCAKC"}
