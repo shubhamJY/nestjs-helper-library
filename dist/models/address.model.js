@@ -9,20 +9,20 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.AddressSchema = exports.Address = void 0;
+exports.AddressSchema = exports.AddressModel = void 0;
 const mongoose_1 = require("@nestjs/mongoose");
 const mongoose_2 = require("mongoose");
-let Address = class Address {
+let AddressModel = class AddressModel {
 };
-exports.Address = Address;
+exports.AddressModel = AddressModel;
 __decorate([
     (0, mongoose_1.Prop)({ type: String }),
     __metadata("design:type", String)
-], Address.prototype, "line1", void 0);
+], AddressModel.prototype, "line1", void 0);
 __decorate([
     (0, mongoose_1.Prop)({ type: String, default: "" }),
     __metadata("design:type", String)
-], Address.prototype, "line2", void 0);
+], AddressModel.prototype, "line2", void 0);
 __decorate([
     (0, mongoose_1.Prop)({
         required: true,
@@ -31,33 +31,33 @@ __decorate([
         index: true,
     }),
     __metadata("design:type", String)
-], Address.prototype, "cityId", void 0);
+], AddressModel.prototype, "cityId", void 0);
 __decorate([
     (0, mongoose_1.Prop)({ type: String, default: "" }),
     __metadata("design:type", String)
-], Address.prototype, "cityName", void 0);
+], AddressModel.prototype, "cityName", void 0);
 __decorate([
     (0, mongoose_1.Prop)({ type: String, default: "" }),
     __metadata("design:type", String)
-], Address.prototype, "stateName", void 0);
+], AddressModel.prototype, "stateName", void 0);
 __decorate([
     (0, mongoose_1.Prop)({ type: String, default: "" }),
     __metadata("design:type", String)
-], Address.prototype, "countryName", void 0);
+], AddressModel.prototype, "countryName", void 0);
 __decorate([
     (0, mongoose_1.Prop)({ type: String, default: "" }),
     __metadata("design:type", String)
-], Address.prototype, "landmark", void 0);
+], AddressModel.prototype, "landmark", void 0);
 __decorate([
     (0, mongoose_1.Prop)({ type: String, default: "", index: true }),
     __metadata("design:type", String)
-], Address.prototype, "pincode", void 0);
+], AddressModel.prototype, "pincode", void 0);
 __decorate([
     (0, mongoose_1.Prop)({ type: String, default: "" }),
     __metadata("design:type", String)
-], Address.prototype, "full", void 0);
-exports.Address = Address = __decorate([
+], AddressModel.prototype, "full", void 0);
+exports.AddressModel = AddressModel = __decorate([
     (0, mongoose_1.Schema)({ timestamps: true })
-], Address);
-exports.AddressSchema = mongoose_1.SchemaFactory.createForClass(Address);
+], AddressModel);
+exports.AddressSchema = mongoose_1.SchemaFactory.createForClass(AddressModel);
 //# sourceMappingURL=address.model.js.map
