@@ -25,6 +25,12 @@ export { Match } from "./decorators/match.decorator";
 
 export { BaseService } from "./Services/BaseService";
 
-export { AddressableTypes } from "./enums/AddressableTypes";
 export { OtpMessageChannelTypes } from "./enums/OtpMessageChannelTypes";
 export { DocumentFace } from "./enums/DocumentFace";
+
+export { Attachment } from "./entities/Attachment";
+
+export { AddressDto } from "./dto/addressDto";
+export { AddressableTypes } from "./enums/AddressableTypes";
+
+export { BaseResource } from "./resources/base.resource";

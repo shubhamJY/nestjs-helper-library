@@ -14,6 +14,7 @@ export type IsExistsInterface = {
     tableName: string;
     column: string;
     isMongoId?: boolean;
+    nullable?: boolean;
 };
 
 // decorator function
@@ -36,7 +37,12 @@ export class IsExistsConstraint implements ValidatorConstraintInterface {
     message: string;
     constructor() {}
     async validate(value: any, args?: ValidationArguments): Promise<boolean> {
-        const { each, isMongoId, tableName, column }: IsExistsInterface = args?.constraints[0];
+        const { each, isMongoId, tableName, column, nullable }: IsExistsInterface =
+            args?.constraints[0];
+
+        if (nullable) {
+            return true;
+        }
 
         let query: any = {
             [column]: value,
@@ -52,7 +58,7 @@ export class IsExistsConstraint implements ValidatorConstraintInterface {
 
         let valArr: any = [];
 
-        if (each) {
+        if (each && Array.isArray(value)) {
             valArr = [...value];
             if (isMongoId) {
                 valArr = valArr

@@ -1,9 +1,12 @@
 import {
     BadRequestException,
     ConflictException,
+    HttpStatus,
     InternalServerErrorException,
     NotFoundException,
 } from "@nestjs/common";
+import * as path from "path";
+import * as fs from "fs";
 
 export class BaseController {
     async respondBySearchWithPaginatedData(query: any = {}, service: any, options = {}) {
@@ -78,5 +81,20 @@ export class BaseController {
                 cause: error,
             },
         );
+    }
+
+    rootDir() {
+        return path.join(__dirname, "..");
+    }
+
+    moveToPublic(filePath) {
+        const destination = path.join(this.rootDir(), "public", filePath);
+        try {
+            fs.renameSync(path.join(this.rootDir(), filePath), destination);
+            return { path: destination, url: "/" + filePath.toString().replaceAll("\\", "/") };
+        } catch (error) {
+            console.error(error);
+            return false;
+        }
     }
 }
