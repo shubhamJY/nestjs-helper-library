@@ -43,7 +43,10 @@ let IsExistsConstraint = class IsExistsConstraint {
     constructor() { }
     validate(value, args) {
         return __awaiter(this, void 0, void 0, function* () {
-            const { each, isMongoId, tableName, column } = args === null || args === void 0 ? void 0 : args.constraints[0];
+            const { each, isMongoId, tableName, column, nullable } = args === null || args === void 0 ? void 0 : args.constraints[0];
+            if (nullable) {
+                return true;
+            }
             let query = {
                 [column]: value,
             };
@@ -56,7 +59,7 @@ let IsExistsConstraint = class IsExistsConstraint {
                 catch (error) { }
             }
             let valArr = [];
-            if (each) {
+            if (each && Array.isArray(value)) {
                 valArr = [...value];
                 if (isMongoId) {
                     valArr = valArr
