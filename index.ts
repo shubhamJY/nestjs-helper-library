@@ -10,8 +10,8 @@ mongoose
         console.log(err);
     });
 
-export { BaseController } from "./controllers/BaseController";
-export { BaseService } from "./services/BaseService";
+export { BaseController } from "./Controllers/BaseController";
+export { BaseService } from "./Services/BaseService";
 
 export * as decorators from "./decorators";
 export * as entities from "./entities";

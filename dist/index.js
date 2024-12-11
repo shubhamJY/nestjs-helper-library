@@ -47,9 +47,9 @@ mongoose_1.default
     .catch((err) => {
     console.log(err);
 });
-var BaseController_1 = require("./controllers/BaseController");
+var BaseController_1 = require("./Controllers/BaseController");
 Object.defineProperty(exports, "BaseController", { enumerable: true, get: function () { return BaseController_1.BaseController; } });
-var BaseService_1 = require("./services/BaseService");
+var BaseService_1 = require("./Services/BaseService");
 Object.defineProperty(exports, "BaseService", { enumerable: true, get: function () { return BaseService_1.BaseService; } });
 exports.decorators = __importStar(require("./decorators"));
 exports.entities = __importStar(require("./entities"));
