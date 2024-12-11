@@ -33,11 +33,14 @@
             "url": "https://github.com/ninja1ndia"
         }
     ],
+    "publishConfig": {
+        "@coderomeos:registry": "https://npm.pkg.github.com"
+    },
     "license": "ISC",
     "bugs": {
-        "url": "https://github.com/ZeProp/zeprop-nest-common/issues"
+        "url": "https://github.com/CodeRomeos/nestjs-helper-library"
     },
-    "homepage": "https://github.com/ZeProp/zeprop-nest-common#readme",
+    "homepage": "https://github.com/CodeRomeos/nestjs-helper-library#readme",
     "dependencies": {
         "dotenv": "^16.4.7",
         "tslib": "2.6.3",
