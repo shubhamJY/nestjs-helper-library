@@ -1,70 +1,58 @@
 {
-    "name": "@cr/nestjs-helper-library",
-    "version": "0.1.17",
-    "description": "A nestjs helper library",
-    "scripts": {
-        "test": "echo \"Error: no test specified\" && exit 1",
-        "build": "tsc"
-    },
-    "repository": {
-        "type": "git",
-        "url": "git+ssh://git@github.com:CodeRomeos/nestjs-helper-library.git"
-    },
-    "main": "dist/index.js",
-    "types": "dist/index.d.ts",
-    "author": {
-        "name": "Abid Raza",
-        "email": "ari.abid@gmail.com",
-        "url": "https://github.com/ariabid"
-    },
-    "contributors": [
-        {
-            "name": "Abid Raza",
-            "email": "ari.abid@gmail.com",
-            "url": "https://github.com/ariabid"
-        },
-        {
-            "name": "Gautam Kumar",
-            "email": "guruonly007@gmail.com",
-            "url": "https://github.com/r8here"
-        },
-        {
-            "name": "Shubham Surya",
-            "url": "https://github.com/ninja1ndia"
-        }
-    ],
-    "publishConfig": {
-        "@coderomeos:registry": "https://npm.pkg.github.com"
-    },
-    "license": "ISC",
-    "bugs": {
-        "url": "https://github.com/CodeRomeos/nestjs-helper-library"
-    },
-    "homepage": "https://github.com/CodeRomeos/nestjs-helper-library#readme",
-    "dependencies": {
-        "dotenv": "^16.4.7",
-        "tslib": "2.6.3",
-        "uuid": "^11.0.3"
-    },
-    "peerDependencies": {
-        "@nestjs/mongoose": "^10.0.10",
-        "bcrypt": "^5.1.1",
-        "class-transformer": "^0.5.1",
-        "class-validator": "^0.14.1",
-        "fs": "^0.0.1-security",
-        "mongoose": "^8.7.2",
-        "path": "^0.12.7"
-    },
-    "devDependencies": {
-        "@nestjs/common": "^10.4.5",
-        "@nestjs/testing": "^10.4.5",
-        "@types/bcrypt": "^5.0.2",
-        "@types/jest": "^29.5.13",
-        "@types/moment": "^2.13.0",
-        "@types/node": "^22.7.8",
-        "@types/uuid": "^10.0.0",
-        "aws-sdk": "^2.1691.0",
-        "moment": "^2.30.1",
-        "typescript": "^5.6.3"
-    }
+  "name": "@coderomeos/nestjs-helper-library",
+  "version": "0.1.17",
+  "description": "A nestjs helper library",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "tsc"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/CodeRomeos/nestjs-helper-library.git"
+  },
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "author": "Abid Raza <ari.abid@gmail.com> (https://github.com/ariabid)",
+  "contributors": [
+    "Abid Raza <ari.abid@gmail.com> (https://github.com/ariabid)",
+    "Gautam Kumar <guruonly007@gmail.com> (https://github.com/r8here)",
+    "Shubham Surya (https://github.com/ninja1ndia)"
+  ],
+  "publishConfig": {
+    "@coderomeos:registry": "https://npm.pkg.github.com"
+  },
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/CodeRomeos/nestjs-helper-library"
+  },
+  "homepage": "https://github.com/CodeRomeos/nestjs-helper-library#readme",
+  "dependencies": {
+    "dotenv": "^16.4.7",
+    "tslib": "2.6.3",
+    "uuid": "^11.0.3"
+  },
+  "peerDependencies": {
+    "@nestjs/mongoose": "^10.0.10",
+    "bcrypt": "^5.1.1",
+    "class-transformer": "^0.5.1",
+    "class-validator": "^0.14.1",
+    "fs": "^0.0.1-security",
+    "mongoose": "^8.7.2",
+    "path": "^0.12.7"
+  },
+  "devDependencies": {
+    "@nestjs/common": "^10.4.5",
+    "@nestjs/testing": "^10.4.5",
+    "@types/bcrypt": "^5.0.2",
+    "@types/jest": "^29.5.13",
+    "@types/moment": "^2.13.0",
+    "@types/node": "^22.7.8",
+    "@types/uuid": "^10.0.0",
+    "aws-sdk": "^2.1691.0",
+    "moment": "^2.30.1",
+    "typescript": "^5.6.3"
+  },
+  "keywords": [
+    "nestjs"
+  ]
 }
