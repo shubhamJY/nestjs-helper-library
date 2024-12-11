@@ -12,11 +12,3 @@ mongoose
 
 export { BaseController } from "./controllers/BaseController";
 export { BaseService } from "./services/BaseService";
-
-export * from "./decorators";
-export * from "./enums";
-export * from "./entities";
-export * from "./models";
-export * from "./resources";
-export * from "./enums";
-export * from "./dtos";
