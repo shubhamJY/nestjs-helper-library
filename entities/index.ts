@@ -4,7 +4,7 @@ export { CompanyEntity } from "./company.entity";
 export { CityEntity } from "./city.entity";
 export { CountryEntity } from "./country.entity";
 export { StateEntity } from "./state.entity";
-export { UserEntity } from "./user/user.entity";
+export { UserEntity } from "./user.entity";
 export { UserPlanEntity } from "./userPlan.entity";
 export { AddressEntity } from "./address.entity";
 export { DefaultEntity } from "./default.entity";

@@ -1,7 +1,7 @@
 import { BaseEntity } from "./base.entity";
 import { BrandEntity } from "./brand.entity";
 import { DefaultEntity } from "./default.entity";
-import { UserEntity } from "./user/user.entity";
+import { UserEntity } from "./user.entity";
 
 export class ListingEntity extends BaseEntity {
     constructor(partial: Partial<ListingEntity>) {

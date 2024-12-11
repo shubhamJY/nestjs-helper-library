@@ -11,7 +11,7 @@ var country_entity_1 = require("./country.entity");
 Object.defineProperty(exports, "CountryEntity", { enumerable: true, get: function () { return country_entity_1.CountryEntity; } });
 var state_entity_1 = require("./state.entity");
 Object.defineProperty(exports, "StateEntity", { enumerable: true, get: function () { return state_entity_1.StateEntity; } });
-var user_entity_1 = require("./user/user.entity");
+var user_entity_1 = require("./user.entity");
 Object.defineProperty(exports, "UserEntity", { enumerable: true, get: function () { return user_entity_1.UserEntity; } });
 var userPlan_entity_1 = require("./userPlan.entity");
 Object.defineProperty(exports, "UserPlanEntity", { enumerable: true, get: function () { return userPlan_entity_1.UserPlanEntity; } });

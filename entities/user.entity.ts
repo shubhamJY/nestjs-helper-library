@@ -1,6 +1,6 @@
 import mongoose from "mongoose";
-import { CountryEntity } from "../country.entity";
-import { UserPlanEntity } from "../userPlan.entity";
+import { CountryEntity } from "./country.entity";
+import { UserPlanEntity } from "./userPlan.entity";
 
 export class UserEntity {
     _id?: any | undefined;

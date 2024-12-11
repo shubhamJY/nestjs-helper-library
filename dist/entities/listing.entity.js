@@ -4,7 +4,7 @@ exports.ListingEntity = void 0;
 const base_entity_1 = require("./base.entity");
 const brand_entity_1 = require("./brand.entity");
 const default_entity_1 = require("./default.entity");
-const user_entity_1 = require("./user/user.entity");
+const user_entity_1 = require("./user.entity");
 class ListingEntity extends base_entity_1.BaseEntity {
     constructor(partial) {
         const allowed = [
