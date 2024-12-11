@@ -3,7 +3,7 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
     return (mod && mod.__esModule) ? mod : { "default": mod };
 };
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.BaseResource = exports.AddressableTypes = exports.AddressDto = exports.DocumentFace = exports.OtpMessageChannelTypes = exports.BaseService = exports.Match = exports.IsExistsConstraint = exports.isExists = exports.IsUniqueConstraint = exports.isUnique = exports.ListingTypesEnum = exports.BaseController = void 0;
+exports.AddressSchema = exports.Address = exports.BaseResource = exports.AddressableTypes = exports.AddressDto = exports.DocumentFace = exports.OtpMessageChannelTypes = exports.BaseService = exports.Match = exports.IsExistsConstraint = exports.isExists = exports.IsUniqueConstraint = exports.isUnique = exports.ListingTypesEnum = exports.BaseController = void 0;
 const mongoose_1 = __importDefault(require("mongoose"));
 require("dotenv").config();
 mongoose_1.default
@@ -40,4 +40,7 @@ var AddressableTypes_1 = require("./enums/AddressableTypes");
 Object.defineProperty(exports, "AddressableTypes", { enumerable: true, get: function () { return AddressableTypes_1.AddressableTypes; } });
 var base_resource_1 = require("./resources/base.resource");
 Object.defineProperty(exports, "BaseResource", { enumerable: true, get: function () { return base_resource_1.BaseResource; } });
+var address_model_1 = require("./models/address.model");
+Object.defineProperty(exports, "Address", { enumerable: true, get: function () { return address_model_1.Address; } });
+Object.defineProperty(exports, "AddressSchema", { enumerable: true, get: function () { return address_model_1.AddressSchema; } });
 //# sourceMappingURL=index.js.map

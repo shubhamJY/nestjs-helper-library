@@ -34,3 +34,5 @@ export { AddressDto } from "./dto/addressDto";
 export { AddressableTypes } from "./enums/AddressableTypes";
 
 export { BaseResource } from "./resources/base.resource";
+
+export { Address, AddressDocument, AddressSchema } from "./models/address.model";
