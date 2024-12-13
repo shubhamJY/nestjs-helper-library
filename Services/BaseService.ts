@@ -129,7 +129,10 @@ export abstract class BaseService {
 
         Object.entries(query).map((q, i) => {
             if (q[0].endsWith("Id")) {
-                query[q[0]] = new mongoose.Types.ObjectId(`${q[1]?.toString()}`);
+                query[q[0]] = q[1]?.toString();
+                if (mongoose.Types.ObjectId.isValid(q[1]?.toString())) {
+                    query[q[0]] = new mongoose.Types.ObjectId(`${q[1]?.toString()}`);
+                }
             }
         });
         return query;

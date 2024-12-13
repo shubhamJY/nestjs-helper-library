@@ -154,9 +154,12 @@ let BaseService = class BaseService {
             query = Object.assign(Object.assign({}, query), { _id: { $in: ids } });
         }
         Object.entries(query).map((q, i) => {
-            var _a;
+            var _a, _b, _c;
             if (q[0].endsWith("Id")) {
-                query[q[0]] = new mongoose_1.default.Types.ObjectId(`${(_a = q[1]) === null || _a === void 0 ? void 0 : _a.toString()}`);
+                query[q[0]] = (_a = q[1]) === null || _a === void 0 ? void 0 : _a.toString();
+                if (mongoose_1.default.Types.ObjectId.isValid((_b = q[1]) === null || _b === void 0 ? void 0 : _b.toString())) {
+                    query[q[0]] = new mongoose_1.default.Types.ObjectId(`${(_c = q[1]) === null || _c === void 0 ? void 0 : _c.toString()}`);
+                }
             }
         });
         return query;
