@@ -1,4 +1,4 @@
-import { Injectable, Param, Req } from "@nestjs/common";
+import { Injectable } from "@nestjs/common";
 import {
     registerDecorator,
     ValidationArguments,
@@ -33,11 +33,7 @@ export function isUnique(options: IsUniqueInterface, validationOptions?: Validat
 @Injectable()
 export class IsUniqueConstraint implements ValidatorConstraintInterface {
     constructor() {}
-    async validate(
-        value: any,
-        args?: ValidationArguments,
-        @Param("id") id?: any,
-    ): Promise<boolean> {
+    async validate(value: any, args?: ValidationArguments): Promise<boolean> {
         // catch options from decorator
         const { tableName, column, except }: IsUniqueInterface = args?.constraints[0];
         const requestParams: any = args?.object;
@@ -47,7 +43,12 @@ export class IsUniqueConstraint implements ValidatorConstraintInterface {
         };
 
         if (except) {
-            query["_id"] = { $ne: requestParams._id };
+            if (requestParams._id) {
+                query["_id"] = { $ne: requestParams._id };
+            }
+            if (requestParams.uuid) {
+                query["uuid"] = { $ne: requestParams.uuid };
+            }
         }
 
         const checkExists = await mongoose.connection.collection(tableName).findOne(query);
