@@ -1,4 +1,5 @@
-import { Injectable } from "@nestjs/common";
+import { Injectable, Param, Req } from "@nestjs/common";
+import { InjectConnection } from "@nestjs/mongoose";
 import {
     registerDecorator,
     ValidationArguments,
@@ -6,13 +7,13 @@ import {
     ValidatorConstraint,
     ValidatorConstraintInterface,
 } from "class-validator";
-import mongoose from "mongoose";
+import { Connection } from "mongoose";
 
 // decorator options interface
 export type IsUniqueInterface = {
     tableName: string;
     column: string;
-    except?: string | boolean | null;
+    except?: string | null;
 };
 
 // decorator function
@@ -32,29 +33,29 @@ export function isUnique(options: IsUniqueInterface, validationOptions?: Validat
 @ValidatorConstraint({ name: "IsUniqueConstraint", async: true })
 @Injectable()
 export class IsUniqueConstraint implements ValidatorConstraintInterface {
-    constructor() {}
-    async validate(value: any, args?: ValidationArguments): Promise<boolean> {
+    constructor(@InjectConnection() private readonly connection: Connection) {}
+    async validate(
+        value: any,
+        args?: ValidationArguments,
+        @Param("id") id?: any,
+    ): Promise<boolean> {
         // catch options from decorator
-        const { tableName, column, except }: IsUniqueInterface = args?.constraints[0];
-        const requestParams: any = args?.object;
+        const { tableName, column, except }: IsUniqueInterface = args.constraints[0];
+        const requestParams: any = args.object;
+        const checkExcept = ["", undefined, null].includes(except) ? false : true;
 
         const query = {
             [column]: value,
         };
 
-        if (except) {
-            if (requestParams._id) {
-                query["_id"] = { $ne: requestParams._id };
-            }
-            if (requestParams.uuid) {
-                query["uuid"] = { $ne: requestParams.uuid };
-            }
+        if (checkExcept) {
+            query[except] = { $ne: requestParams[except] };
         }
 
-        const checkExists = await mongoose.connection.collection(tableName).findOne(query);
+        const checkExists = await this.connection.collection(tableName).findOne(query);
 
-        if (except && checkExists) {
-            return true;
+        if (checkExcept && checkExists) {
+            return false;
         }
 
         return checkExists ? false : true;
